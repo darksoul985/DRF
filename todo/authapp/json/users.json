@@ -1,0 +1,30 @@
+[
+    {
+        "username": "anton",
+        "first_name": "Антонов",
+        "last_name": "Антонович",
+        "email": "anton@gb.local",
+        "bersth_day": "1978-10-01"
+    },
+    {
+        "username": "semen",
+        "first_name": "Семенов",
+        "last_name": "Семенович",
+        "email": "semen@gb.local",
+        "bersth_day": "2001-12-01"
+    },
+    {
+        "username": "валерия",
+        "first_name": "Манжикова",
+        "last_name": "Антоновна",
+        "email": "lera@gb.local",
+        "bersth_day": "2013-06-01"
+    },
+    {
+        "username": "new",
+        "first_name": "coll",
+        "last_name": "victory",
+        "email": "new@gb.local",
+        "bersth_day": "1998-09-06"
+    }
+]
