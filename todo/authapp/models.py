@@ -9,7 +9,7 @@ class UserToDo(AbstractUser):
         blank=True
     )
 
-    bersth_day = models.DateField(verbose_name='возраст', blank=True)
+    birthday = models.DateField(verbose_name='возраст', blank=True)
 
     is_active = models.BooleanField(
         verbose_name='активный пользователь',
