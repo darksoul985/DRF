@@ -23,7 +23,7 @@ class Command(BaseCommand):
             first_name='Админ',
             last_name='Админ',
             email='admin@gb.local',
-            bersth_day='1985-01-01'
+            birthday='1985-01-01'
         )
 
         user_root.set_password('admin')
