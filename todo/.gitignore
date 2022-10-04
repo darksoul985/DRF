@@ -1,0 +1,4 @@
+.gitignore
+env/
+.python-version
+.idea

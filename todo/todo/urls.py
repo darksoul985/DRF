@@ -15,14 +15,27 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from authapp.views import UserToDoViewSet
+from authapp.views import UsersListAPIView, UserDetailAPIView
+from todoapp.views import ProjectListMixin, ProjectDetailMixenViews, TodoListView, TodoDetailView
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register('auth', UserToDoViewSet)
+# router.register('auth', UsersListAPIView)
+# router.register('auth/<int:pk>', UserDetailAPIView)
+# router.register('projects', ProjectListMixin, basename='projects')
+# router.register('projects/<int:pk>', ProjectDetailMixenViews, basename='project_details')
+# router.register('todo', TodoListView, basename='todo_list')
+# router.register('todo/<int:pk>', TodoDetailView, basename='todo_details')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth', include('rest_framework.urls')),
     path('api/', include(router.urls)),
+    path('api/auth/', UsersListAPIView.as_view()),
+    path('api/auth/<int:pk>', UserDetailAPIView.as_view()),
+    path('api/projects/', ProjectListMixin.as_view(), name='projects'),
+    path('api/projects/<int:pk>/', ProjectDetailMixenViews.as_view(), name='project_details'),
+    path('api/todo/', TodoListView.as_view(), name='todo_list'),
+    path('api/todo/<int:pk>/', TodoDetailView.as_view(), name='todo_detail'),
 ]
