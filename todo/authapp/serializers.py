@@ -1,8 +1,13 @@
-from rest_framework.serializers import HyperlinkedModelSerializer
+from rest_framework import serializers
 from authapp.models import UserToDo
 
 
-class UserToDoModelSerializer(HyperlinkedModelSerializer):
-    class Meta:
-        model = UserToDo
-        fields = ['username', 'first_name', 'last_name', 'email']
+class UserToDoModelSerializer(serializers.Serializer):
+    username = serializers.CharField(max_length=255)
+    first_name = serializers.CharField()
+    last_name = serializers.CharField()
+    email = serializers.EmailField()
+
+    # class Meta:
+    #     model = UserToDo
+    #     fields = ['username', 'first_name', 'last_name', 'email']

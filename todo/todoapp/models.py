@@ -22,6 +22,7 @@ class Project(models.Model):
 
 class Todo(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE, verbose_name='проект')
+    users = models.ForeignKey(UserToDo, verbose_name='участник', on_delete=models.CASCADE, blank=True)
     theme = models.CharField(max_length=128, verbose_name='задача')
     description = models.CharField(max_length=340, verbose_name='содержание')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='дата создание')

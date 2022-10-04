@@ -1,18 +1,14 @@
-from abc import ABCMeta
-
 from rest_framework import serializers
 from todoapp.models import Project, Todo
 
 
-class ProjectModelSerializer(serializers.ModelSerializer):
-
+class TodoModelSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Project
+        model = Todo
         fields = '__all__'
 
 
-class TodoModelSerializer(serializers.ModelSerializer):
-
+class ProjectModelSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Todo
+        model = Project
         fields = '__all__'
