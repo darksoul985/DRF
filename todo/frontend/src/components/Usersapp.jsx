@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
+
 
 const UsersItem = ({user}) => {
+
     return (
         <tr>
             <td>
-                {user.username}
+                {/* TODO не работает ссылка перехода на пользователя*/}
+                <Link to={'/users/${user.id}'}>{user.username}</Link>
             </td>
             <td>
                 {user.first_name}
@@ -38,6 +42,6 @@ const UsersList = ({users}) => {
         </table>
 
     )
-}
+};
 
-export default UsersList
+export default UsersList;

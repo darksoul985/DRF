@@ -11,7 +11,8 @@ class Menu extends React.Component{
         return <div>
             {menus.map((value, index)=>{
                 return <div key={index}><Link label={value} /></div>
-            })}
+            }
+            )}
 
             </div>
     }
